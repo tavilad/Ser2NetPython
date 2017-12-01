@@ -6,4 +6,6 @@ port = 12345                # Reserve a port for your service.
 
 s.connect((host, port))
 print (s.recv(1024))
-s.close                     # Close the socket when done
+cmd=input("Write EXIT to disconnect")
+if cmd=="EXIT":
+    s.close()                     # Close the socket when done

@@ -11,4 +11,8 @@ while True:
    print ('Got connection from', addr)
    output = 'Thank you for connecting'
    c.sendall(output.encode())
-   c.close()                # Close the connection
+   #c.close()                # Close the connection
+   cmd=input("Write EXIT to disconnect")
+   if cmd=="EXIT":
+      s.close()
+      print("server closed")
