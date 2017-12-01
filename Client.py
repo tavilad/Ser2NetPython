@@ -19,7 +19,13 @@ def connect(event):
 
 
 def disconnect(event):
-    s.close()                     # Close the socket when done
+    cmd="EXIT"
+    s.sendall(cmd.encode())
+    s.close()
+    s = socket.socket()         # Create a socket object
+    host = socket.gethostname() # Get local machine name
+    port = 12345 # Close the socket when done
+    print("socket closed")
     return;
 
 def printFromSocket(event):
