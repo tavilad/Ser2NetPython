@@ -11,6 +11,6 @@ if cmd=="EXIT":
     s.close()                     # Close the socket when done
 
 
-def printme():
+def printme(event):
     print("test")
     return;
