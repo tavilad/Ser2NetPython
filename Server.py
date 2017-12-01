@@ -12,3 +12,16 @@ while True:
    output = 'Thank you for connecting'
    c.sendall(output.encode())
    #c.close()                # Close the connection
+   try:
+      output = 'Thank you for connecting'
+      c.sendall(output.encode())
+      data=c.recv(1024)
+      print(data)
+      if data=="EXIT":
+         c.close()
+         
+   except socket.error:
+      c.close()
+      
+   
+
