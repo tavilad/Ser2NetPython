@@ -9,3 +9,8 @@ print (s.recv(1024))
 cmd=input("Write EXIT to disconnect")
 if cmd=="EXIT":
     s.close()                     # Close the socket when done
+
+
+def printme():
+    print("test")
+    return;
