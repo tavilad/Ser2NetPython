@@ -9,15 +9,6 @@ s.listen(5)                 # Now wait for client connection.
 while True:
    c, addr = s.accept()     # Establish connection with client.
    print ('Got connection from', addr)
+   output = 'Thank you for connecting'
+   c.sendall(output.encode())
    #c.close()                # Close the connection
-   try:
-      output = 'Thank you for connecting'
-      c.sendall(output.encode())
-      data=c.recv(1024)
-      if data=="EXIT":
-         c.close()
-         
-   except socket.error:
-      c.close()
-      
-   

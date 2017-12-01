@@ -13,6 +13,7 @@ connectBtn = Button(frame, text="Connect")
 connectBtn.bind("<Button-1>", connect)
 connectBtn.pack()
 
+#disconnect from the Server
 disconnectBtn = Button(frame, text="Disconnect")
 disconnectBtn.bind("<Button-1>", disconnect)
 disconnectBtn.pack()
