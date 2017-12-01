@@ -19,13 +19,12 @@ def connect(event):
 
 
 def disconnect(event):
-    cmd=input("Write EXIT to disconnect")
-    if cmd=="EXIT":
-        s.close()                     # Close the socket when done
+    s.close()                     # Close the socket when done
     return;
 
 def printFromSocket(event):
     print (s.recv(1024))
+    return;
     
 
 

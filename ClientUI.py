@@ -10,7 +10,11 @@ frame.pack()
 
 #pressing this button makes the connection of the client to the TCP/IP Server
 connectBtn = Button(frame, text="Connect")
-connectBtn.bind("<Button-1>", printme)
+connectBtn.bind("<Button-1>", connect)
 connectBtn.pack()
+
+disconnectBtn = Button(frame, text="Disconnect")
+disconnectBtn.bind("<Button-1>", disconnect)
+disconnectBtn.pack()
 
 root.mainloop()
